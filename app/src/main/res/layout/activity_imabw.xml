@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.ImabwActivity">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/appbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            app:contentInsetEnd="@dimen/activity_horizontal_margin"
+            app:contentInsetStart="@dimen/activity_horizontal_margin"
+            app:layout_scrollFlags="scroll|enterAlways">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/bookCover"
+                android:layout_width="?attr/actionBarSize"
+                android:layout_height="?attr/actionBarSize"
+                android:paddingBottom="2dp"
+                android:paddingTop="2dp"
+                android:src="@mipmap/ic_launcher"
+                app:civ_border_color="#FFF"
+                app:civ_border_width="1.5dp" />
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/bookTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="marquee"
+                android:maxLines="1"
+                android:paddingEnd="2dp"
+                android:paddingLeft="2dp"
+                android:paddingRight="2dp"
+                android:paddingStart="2dp"
+                android:text="Title of Book"
+                android:textColor="#FFF"
+                android:textSize="18sp"
+                tools:ignore="HardcodedText" />
+        </android.support.v7.widget.Toolbar>
+
+        <FrameLayout
+            android:id="@+id/pathBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingEnd="@dimen/activity_horizontal_margin"
+            android:paddingLeft="@dimen/activity_horizontal_margin"
+            android:paddingRight="@dimen/activity_horizontal_margin"
+            android:paddingStart="@dimen/activity_horizontal_margin">
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/pathList"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/path_bar_size"
+                android:overScrollMode="never"
+                tools:listitem="@layout/path_item" />
+
+            <ProgressBar
+                android:id="@+id/pathProgress"
+                android:layout_width="@dimen/path_bar_size"
+                android:layout_height="@dimen/path_bar_size"
+                android:layout_gravity="center_vertical|end"
+                android:paddingBottom="0.5dp"
+                android:paddingTop="0.5dp" />
+        </FrameLayout>
+    </android.support.design.widget.AppBarLayout>
+
+    <com.tubb.smrv.SwipeMenuRecyclerView
+        android:id="@+id/chapterList"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:overScrollMode="never"
+        android:scrollbarStyle="outsideOverlay"
+        android:scrollbars="vertical"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        tools:listitem="@layout/chapter_item" />
+
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/placeholder"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="@string/no_chapters_tip"
+        android:textAppearance="?android:textAppearanceLarge" />
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/controlsBar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/controls_bar_size"
+        android:layout_gravity="bottom"
+        android:background="?attr/colorPrimary"
+        app:contentInsetEndWithActions="0dp"
+        app:contentInsetStartWithNavigation="0dp"
+        app:navigationIcon="?attr/actionModeCloseDrawable"
+        app:title="2 ITEMS"
+        app:titleTextAppearance="?android:textAppearanceMedium"
+        app:titleTextColor="#FFF" />
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/scroller"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical|end"
+        android:layout_margin="@dimen/fab_margin"
+        android:visibility="gone"
+        app:srcCompat="@mipmap/ic_expand_arrow" />
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="@dimen/fab_margin"
+        app:srcCompat="@mipmap/ic_plus" />
+</android.support.design.widget.CoordinatorLayout>

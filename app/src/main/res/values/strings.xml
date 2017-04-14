@@ -1,0 +1,71 @@
+<resources>
+    <string name="app_name">Imabw</string>
+
+    <string name="ok">OK</string>
+    <string name="cancel">Cancel</string>
+    <string name="move">Move</string>
+    <string name="rename">Rename</string>
+    <string name="delete">Delete</string>
+    <string name="select_all">Select All</string>
+    <string name="exit">Exit</string>
+    <string name="untitled">Untitled</string>
+
+    <string name="intro">Intro</string>
+    <string name="attributes">Attributes</string>
+
+    <string name="loading">Loading…</string>
+
+    <string name="search">Search</string>
+    <string name="open_book_error">Open Book Error</string>
+    <string name="no_chapters_tip">(No Chapters)</string>
+    <string name="no_intro_tip">(No Description)</string>
+    <string name="no_attribute_tip">(No More Attributes)</string>
+
+    <string name="quit_press_tip">Press again to exit</string>
+    <string name="deny_permission_tip">You denied required permission, some features may be unavailable.</string>
+    <string name="edit">Edit</string>
+    <string name="export">Export</string>
+    <string name="settings">Settings</string>
+    <string name="reset">Reset</string>
+    <string name="file">File</string>
+    <string name="create">New</string>
+    <string name="open">Open</string>
+    <string name="save">Save</string>
+    <string name="more">More</string>
+    <string name="crawler">Crawler</string>
+    <string name="convert">Convert</string>
+    <string name="extensions">Extensions</string>
+    <string name="manage">Manage</string>
+    <string name="add">Add</string>
+
+    <plurals name="selection_title">
+        <item quantity="one">1 item</item>
+        <item quantity="other">%1$d items</item>
+    </plurals>
+
+    <plurals name="delete_chapter_tip">
+        <item quantity="one">Delete 1 Chapter?\nAll sub-chapters will also be deleted.</item>
+        <item quantity="other">Delete %1$d Chapters?\nAll sub-chapters will also be deleted.</item>
+    </plurals>
+    <string name="cut">Cut</string>
+    <string name="paste">Paste</string>
+    <string name="pref_ui">UI</string>
+    <string name="pref_primary_color">Primary Color</string>
+    <string name="pref_md_status">Dark Status Bar Color</string>
+    <string name="pref_background_image">Background Image</string>
+    <string name="pref_cover_palette">Color from Cover</string>
+    <string name="pref_palette_mode">Cover Palette Mode</string>
+    <string name="pref_accent_color">Accent Color</string>
+    <string name="palette_mode_normal">Normal</string>
+    <string name="palette_mode_light">Light</string>
+    <string name="palette_mode_dark">Dark</string>
+    <string name="palette_mode_fallback">Fallback</string>
+    <string name="pref_background_color">Background Color</string>
+    <string name="merge">Merge</string>
+    <string name="details">Details</string>
+    <string name="sort">Sort</string>
+    <string name="new_chapter_title">New Chapter</string>
+    <string name="new_chapter_hint">Title of Chapter</string>
+    <string name="rename_chapter_title">Rename Chapter</string>
+    <string name="clear">Clear</string>
+</resources>

@@ -1,0 +1,80 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-android'
+apply plugin: 'realm-android'
+
+android {
+    compileSdkVersion Integer.parseInt(project.compileSdkVersion)
+    buildToolsVersion project.buildToolsVersion
+
+    defaultConfig {
+        minSdkVersion Integer.parseInt(project.minSdkVersion)
+        targetSdkVersion Integer.parseInt(project.targetSdkVersion)
+
+        versionCode Integer.parseInt(project.appVersionCode)
+        versionName project.appVersionName
+        applicationId project.appId
+        vectorDrawables.useSupportLibrary = true
+    }
+
+    sourceSets {
+        main.java.srcDirs += 'src/main/kotlin'
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    dataBinding {
+        enabled true
+    }
+
+    packagingOptions {
+        merge 'META-INF/jem/parsers.prop'
+        merge 'META-INF/jem/makers.prop'
+    }
+}
+
+kapt {
+    generateStubs true
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    compile project(':penguin')
+
+    // Android Support Library
+    compile "com.android.support:cardview-v7:$support_version"
+
+    // Jem
+    compile("pw.phylame.jem:jem-kotlin:$jem_version") {
+        exclude group: 'org.jetbrains.kotlin'
+    }
+    compile("pw.phylame.jem:jem-formats:$jem_version") {
+        exclude group: 'org.json'
+        exclude group: 'xpp3'
+    }
+
+    // DataBinding & Realm
+    kapt "com.android.databinding:compiler:$build_version"
+    kapt "io.realm:realm-annotations:$realm_version"
+    kapt "io.realm:realm-annotations-processor:$realm_version"
+
+    compile('com.tbruyelle.rxpermissions:rxpermissions:0.9.3@aar') {
+        exclude group: 'io.reactivex'
+    }
+
+    // Retrofit
+    compile "com.squareup.retrofit2:converter-gson:$retrofit_version"
+    compile("com.squareup.retrofit2:adapter-rxjava:$retrofit_version") {
+        exclude group: 'io.reactivex'
+    }
+
+    // Images & Others
+    compile 'de.hdodenhof:circleimageview:2.1.0'
+    compile 'com.amulyakhare:com.amulyakhare.textdrawable:1.0.1'
+    compile 'com.tubb.smrv:swipemenu-recyclerview:5.4.0'
+}

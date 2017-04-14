@@ -1,0 +1,26 @@
+<resources>
+
+    <style name="BaseTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Colors -->
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="android:windowBackground">@color/colorBackground</item>
+
+        <item name="android:listDivider">@drawable/line_divider</item>
+
+        <!-- ActionBar & ActionMode -->
+        <item name="windowActionModeOverlay">true</item>
+        <item name="actionBarSize">@dimen/action_bar_size</item>
+        <item name="popupTheme">@style/ThemeOverlay.AppCompat.Light</item>
+    </style>
+
+    <style name="AppTheme" parent="BaseTheme">
+
+    </style>
+
+    <style name="AppTheme.OverviewAnimation" parent="android:Animation">
+        <item name="android:windowEnterAnimation">@anim/scale_in</item>
+        <item name="android:windowExitAnimation">@anim/scale_out</item>
+    </style>
+</resources>

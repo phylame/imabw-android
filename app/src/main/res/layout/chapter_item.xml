@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<com.tubb.smrv.SwipeHorizontalMenuLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:sml="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#C0F8F8F8"
+    sml:sml_auto_open_percent="0.2"
+    sml:sml_scroller_duration="250"
+    sml:sml_scroller_interpolator="@android:anim/bounce_interpolator">
+
+    <LinearLayout
+        android:id="@+id/smContentView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:foreground="?attr/selectableItemBackground"
+            android:orientation="horizontal">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/cover"
+                android:layout_width="@dimen/chapter_cover_size"
+                android:layout_height="@dimen/chapter_cover_size"
+                android:layout_gravity="center_vertical"
+                android:layout_marginBottom="2dp"
+                android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                android:layout_marginStart="@dimen/activity_horizontal_margin"
+                android:layout_marginTop="2dp"
+                android:src="@mipmap/ic_launcher"
+                app:civ_border_color="#B8B8B8"
+                app:civ_border_width="2dp" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginEnd="4dp"
+                android:layout_marginLeft="4dp"
+                android:layout_marginRight="4dp"
+                android:layout_marginStart="4dp"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="marquee"
+                    android:maxLines="1"
+                    android:text="Title of Chapter"
+                    android:textColor="#000"
+                    android:textSize="18sp"
+                    sml:ignore="HardcodedText" />
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/meta"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="marquee"
+                    android:maxLines="2"
+                    android:text="Meta of Chapter\nContent in second line"
+                    android:textColor="#A000"
+                    android:textSize="14sp"
+                    sml:ignore="HardcodedText" />
+            </LinearLayout>
+
+            <android.support.v7.widget.AppCompatImageView
+                android:id="@+id/option"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginEnd="@dimen/activity_horizontal_margin"
+                android:layout_marginRight="@dimen/activity_horizontal_margin"
+                android:tint="#A000"
+                app:srcCompat="@mipmap/ic_forward" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="#8000" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/smMenuViewRight"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="210dp"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <FrameLayout
+                android:id="@+id/itemRename"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@android:color/holo_green_light"
+                android:foreground="?attr/selectableItemBackground">
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:drawableTop="@mipmap/ic_rename"
+                    android:gravity="center"
+                    android:text="@string/rename"
+                    android:textAllCaps="true"
+                    android:textColor="#FFF"
+                    android:textSize="14sp" />
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/itemAdd"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@android:color/holo_blue_light"
+                android:foreground="?attr/selectableItemBackground">
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:drawableTop="@mipmap/ic_plus"
+                    android:gravity="center"
+                    android:text="@string/add"
+                    android:textAllCaps="true"
+                    android:textColor="#FFF"
+                    android:textSize="14sp" />
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/itemDelete"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@android:color/holo_red_light"
+                android:foreground="?attr/selectableItemBackground">
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:drawableTop="@mipmap/ic_delete"
+                    android:gravity="center"
+                    android:text="@string/delete"
+                    android:textAllCaps="true"
+                    android:textColor="#FFF"
+                    android:textSize="14sp" />
+            </FrameLayout>
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="#8000" />
+    </LinearLayout>
+</com.tubb.smrv.SwipeHorizontalMenuLayout>

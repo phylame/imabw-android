@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Imabw</string>
+    <string name="attributes">属性</string>
+    <string name="cancel">取消</string>
+    <string name="delete">删除</string>
+    <string name="edit">编辑</string>
+    <string name="exit">退出</string>
+    <string name="export">导出</string>
+    <string name="intro">简介</string>
+    <string name="loading">加载中…</string>
+    <string name="move">移动</string>
+    <string name="ok">确定</string>
+    <string name="no_attribute_tip">（无其他属性）</string>
+    <string name="no_chapters_tip">（无内容）</string>
+    <string name="no_intro_tip">（无简介）</string>
+    <string name="open_book_error">打开文件失败</string>
+    <string name="quit_press_tip">再按一次退出</string>
+    <string name="rename">重命名</string>
+    <string name="reset">重置</string>
+    <string name="search">搜索</string>
+    <string name="select_all">全选</string>
+    <string name="settings">设置</string>
+    <string name="untitled">未命名</string>
+    <string name="deny_permission_tip">授权失败，某些功能将无法使用</string>
+    <string name="file">文件</string>
+    <string name="create">新建</string>
+    <string name="open">打开</string>
+    <string name="save">保存</string>
+    <string name="more">更多</string>
+    <string name="crawler">爬虫</string>
+    <string name="convert">转换</string>
+    <string name="extensions">拓展</string>
+    <string name="manage">管理</string>
+    <string name="add">添加</string>
+
+    <plurals name="selection_title">
+        <item quantity="other">%1$d项</item>
+    </plurals>
+
+    <plurals name="delete_chapter_tip">
+        <item quantity="other">删除%1$d项？\n子章节将一并删除。</item>
+    </plurals>
+    <string name="cut">剪切</string>
+    <string name="paste">粘贴</string>
+    <string name="pref_ui">界面</string>
+    <string name="pref_primary_color">主颜色</string>
+    <string name="pref_md_status">深色状态栏</string>
+    <string name="pref_background_image">背景图片</string>
+    <string name="pref_cover_palette">使用封面颜色</string>
+    <string name="pref_palette_mode">封面取色方式</string>
+    <string name="pref_accent_color">次颜色</string>
+    <string name="palette_mode_normal">一般</string>
+    <string name="palette_mode_light">亮色</string>
+    <string name="palette_mode_dark">暗色</string>
+    <string name="palette_mode_fallback">回退</string>
+    <string name="pref_background_color">背景颜色</string>
+    <string name="merge">合并</string>
+    <string name="details">详情</string>
+    <string name="sort">排序</string>
+    <string name="new_chapter_hint">章节名</string>
+    <string name="new_chapter_title">新建章节</string>
+    <string name="rename_chapter_title">重命名章节</string>
+    <string name="clear">清空</string>
+</resources>
